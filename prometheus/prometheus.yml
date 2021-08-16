@@ -20,6 +20,13 @@ scrape_configs:
     follow_redirects: true
     static_configs:
       - targets: ["prometheus:9090"]
+
   - job_name: node-exporter
     static_configs:
       - targets: ["node_exporter:9100"]
+
+  - job_name: 'cadvisor'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['cadvisor:3421']
+  
