@@ -74,10 +74,10 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
       #- /cgroup:/cgroup:ro #doesn't work on MacOS only for Linux
+    ports:
+      - 3421:3421
     restart: unless-stopped
-    expose:
-      - 3421
     networks:
-      - monitor-net
+      - monitor-network
     labels:
       org.label-schema.group: "monitoring"
