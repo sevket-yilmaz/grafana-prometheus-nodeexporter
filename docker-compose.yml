@@ -75,7 +75,7 @@ services:
       - /var/lib/docker:/var/lib/docker:ro
       #- /cgroup:/cgroup:ro #doesn't work on MacOS only for Linux
     ports:
-      - 3421:3421
+      - 8080:8080
     restart: unless-stopped
     networks:
       - monitor-network
